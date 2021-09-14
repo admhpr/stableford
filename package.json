@@ -1,0 +1,27 @@
+{
+  "name": "package-name",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "npx jest",
+    "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}'",
+    "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix"
+  },
+  "dependencies": {
+    "vue": "^3.2.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "@vitejs/plugin-vue": "^1.6.1",
+    "@vue/compiler-sfc": "^3.2.6",
+    "eslint": "^7.32.0",
+    "jest": "^27.1.1",
+    "prettier": "^2.4.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.4"
+  }
+}
