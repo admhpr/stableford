@@ -7,6 +7,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "test": "npx jest",
+    "test:dev": "npx jest --watch",
     "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}'",
     "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix"
   },
