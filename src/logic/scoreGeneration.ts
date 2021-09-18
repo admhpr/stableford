@@ -29,7 +29,8 @@ type PlayerProfile = {
 type HoleProfile = {
   par: PotentialHolePars
   strokeIndex: PotentialStrokeIndexes
-  holesPlayed: PotentialHolesPlayed
+  holesPlayedInRound: PotentialHolesPlayed
+  strokesTaken: number
 }
 
 function calculateStableFordScoreForHole(
