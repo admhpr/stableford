@@ -1,10 +1,8 @@
+import { HoleProfile, PotentialHolesPlayed } from "../types"
+
 const stableFordScores = [
   {
-    playerProfile: {
-      name: "Clifford A. Ashe",
-      gender: "male",
-      handicap: 28,
-    },
+    playerProfile: {},
     holeProfile: {
       par: 4,
       strokeIndex: 1,
@@ -14,5 +12,12 @@ const stableFordScores = [
     expectedScore: 3,
   },
 ]
+
+function playerisPlaying(
+  hole: HoleProfile,
+  holesPlayedInRound: PotentialHolesPlayed
+) {
+  return { ...hole, holesPlayedInRound }
+}
 
 describe(`score generation`, () => {})
