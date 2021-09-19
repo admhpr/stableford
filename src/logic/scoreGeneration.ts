@@ -1,8 +1,8 @@
-import { HoleProfile, PlayerProfile } from "./types"
+import { HoleContext, PlayerProfile } from "./types"
 
 function calculateStableFordScoreForHole(
   player: PlayerProfile,
-  hole: HoleProfile
+  hole: HoleContext
 ): number {
   return 0
 }

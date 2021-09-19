@@ -26,7 +26,7 @@ export type PlayerProfile = {
   gender: GolfPlayerGender
   handicap: number
 }
-export type HoleProfile = {
+export type HoleContext = {
   par: PotentialHolePars
   strokeIndex: PotentialStrokeIndexes
   holesPlayedInRound: PotentialHolesPlayed
