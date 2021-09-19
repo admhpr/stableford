@@ -21,14 +21,16 @@ export type PotentialStrokeIndexes =
   | 18
 export type PotentialHolesPlayed = 9 | 18
 
+export type HoleInfo = {
+  par: PotentialHolePars
+  strokeIndex: PotentialStrokeIndexes
+}
 export type PlayerProfile = {
   name: string
   gender: GolfPlayerGender
   handicap: number
 }
-export type HoleContext = {
-  par: PotentialHolePars
-  strokeIndex: PotentialStrokeIndexes
+export type HoleContext = HoleInfo & {
   holesPlayedInRound: PotentialHolesPlayed
   strokesTaken: number
 }

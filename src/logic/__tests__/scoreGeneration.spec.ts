@@ -1,24 +1,7 @@
 import { HoleContext, PotentialHolesPlayed } from "../types"
 
-const stableFordScores = [
-  {
-    playerProfile: {},
-    HoleContext: {
-      par: 4,
-      strokeIndex: 1,
-      holesPlayedInRound: 18,
-      strokesTaken: 5,
-    },
-    expectedScore: 3,
-  },
-]
-
-function playerisPlaying(
-  hole: HoleContext,
-  holesPlayedInRound: PotentialHolesPlayed
-) {
-  return { ...hole, holesPlayedInRound }
-}
+function play18(course){}
+function play9(course){}
 
 describe(`score generation`, () => {
   it(`calculate scores for players on 18 holes`, () => {})

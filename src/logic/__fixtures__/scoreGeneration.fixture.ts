@@ -22,33 +22,91 @@ const jo = {
   handicap: 0,
 }
 
-const seabrook = {
-  strokeIndex: 1,
-  par: 4,
-}
-const dunes = {
-  strokeIndex: 9,
-  par: 3,
-}
-const captain = {
-  strokeIndex: 11,
-  par: 5,
-}
-const woodline = {
-  strokeIndex: 18,
-  par: 3,
-}
-
-export const holes = {
-  captain,
-  dunes,
-  seabrook,
-  woodline,
-}
+const frontNineHoles = [
+  {
+    par: 4,
+    strokeIndex: 12,
+  },
+  {
+    par: 4,
+    strokeIndex: 4,
+  },
+  {
+    par: 4,
+    strokeIndex: 2,
+  },
+  {
+    par: 3,
+    strokeIndex: 18,
+  },
+  {
+    par: 4,
+    strokeIndex: 14,
+  },
+  {
+    par: 4,
+    strokeIndex: 6,
+  },
+  {
+    par: 4,
+    strokeIndex: 16,
+  },
+  {
+    par: 3,
+    strokeIndex: 10,
+  },
+  {
+    par: 4,
+    strokeIndex: 8,
+  },
+]
+const backNineHoles = [
+  {
+    par: 4,
+    strokeIndex: 9,
+  },
+  {
+    par: 4,
+    strokeIndex: 3,
+  },
+  {
+    par: 4,
+    strokeIndex: 1,
+  },
+  {
+    par: 3,
+    strokeIndex: 13,
+  },
+  {
+    par: 4,
+    strokeIndex: 15,
+  },
+  {
+    par: 4,
+    strokeIndex: 5,
+  },
+  {
+    par: 4,
+    strokeIndex: 17,
+  },
+  {
+    par: 3,
+    strokeIndex: 11,
+  },
+  {
+    par: 4,
+    strokeIndex: 7,
+  },
+]
 
 export const players = {
   albert,
   cliff,
   doris,
   jo,
+}
+
+export const courses = {
+  nine: frontNineHoles,
+  eighteen: [...frontNineHoles, ...backNineHoles],
 }
