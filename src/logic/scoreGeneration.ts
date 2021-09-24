@@ -21,10 +21,10 @@ export function adjustParBasedOnHandicap({
   const additionalStrokesAwardedAfterExtra = handicap - holesInPlay
   if (additionalStrokesAwardedAfterExtra >= 0) {
     extraStrokes += 1
-    const addAnotherStroke = additionalStrokesAwardedAfterExtra - strokeIndex
-    if (addAnotherStroke) {
-      extraStrokes += 1
-    }
+  }
+
+  if (additionalStrokesAwardedAfterExtra >= strokeIndex) {
+    extraStrokes += 1
   }
   return extraStrokes + par
 }
