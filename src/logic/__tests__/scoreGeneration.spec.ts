@@ -15,10 +15,12 @@ describe(`score generation`, () => {
       expect(result).toEqual(6)
     })
     it(`should produce the correct score for a player with a handicap under 18`, () => {})
+    it(`should produce the correct score for a player with a handicap of 0`, () => {})
+    it(`should produce the correct score for a player with a handicap less than zero`, () => {})
     it(`should produce the correct score for a player with a handicap at 18`, () => {
       const result = adjustParBasedOnHandicap({
         par: 4,
-        strokeIndex: 4,
+        strokeIndex: 1,
         handicap: 18,
         holesInPlay: 18,
       })
