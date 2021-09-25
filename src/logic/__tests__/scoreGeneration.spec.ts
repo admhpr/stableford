@@ -16,7 +16,7 @@ describe(`score generation`, () => {
     })
     it(`should produce the correct score for a player with a handicap under 18`, () => {})
     it(`should produce the correct score for a player with a handicap of 0`, () => {})
-    it(`should produce the correct score for a player with a handicap less than zero`, () => {})
+    it(`should produce the correct score for a player with a handicap less than 0`, () => {})
     it(`should produce the correct score for a player with a handicap at 18`, () => {
       const result = adjustParBasedOnHandicap({
         par: 4,

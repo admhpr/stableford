@@ -1,3 +1,14 @@
+const albert = {
+  name: "Albert J. Simpson",
+  gender: "male",
+  handicap: 7,
+}
+
+const bert = {
+  name: "Bert A. Boi",
+  gender: "male",
+  handicap: 18,
+}
 const cliff = {
   name: "Clifford A. Ashe",
   gender: "male",
@@ -8,12 +19,6 @@ const doris = {
   name: "Doris S. Grant",
   gender: "female",
   handicap: 10,
-}
-
-const albert = {
-  name: "Albert J. Simpson",
-  gender: "male",
-  handicap: 7,
 }
 
 const jo = {
@@ -101,6 +106,7 @@ const backNineHoles = [
 
 export const players = {
   albert,
+  bert,
   cliff,
   doris,
   jo,
