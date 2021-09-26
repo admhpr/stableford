@@ -30,11 +30,11 @@ const jo = {
 const frontNineHoles = [
   {
     par: 4,
-    strokeIndex: 12,
+    strokeIndex: 4,
   },
   {
     par: 4,
-    strokeIndex: 4,
+    strokeIndex: 12,
   },
   {
     par: 4,

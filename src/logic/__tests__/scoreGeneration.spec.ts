@@ -1,14 +1,15 @@
 import { adjustParBasedOnHandicap } from "../scoreGeneration"
+import { courses, players } from "../__fixtures__/scoreGeneration.fixture"
 
 function play18(course) {}
 function play9(course) {}
 
 describe(`score generation`, () => {
+  const [firstHole] = courses.eighteen
   describe(`adjustParBasedOnHandicap`, () => {
     it(`should produce the correct score for a player with a handicap over 18`, () => {
       const result = adjustParBasedOnHandicap({
-        par: 4,
-        strokeIndex: 4,
+        ...firstHole,
         handicap: 22,
         holesInPlay: 18,
       })
@@ -19,8 +20,7 @@ describe(`score generation`, () => {
     it(`should produce the correct score for a player with a handicap less than 0`, () => {})
     it(`should produce the correct score for a player with a handicap at 18`, () => {
       const result = adjustParBasedOnHandicap({
-        par: 4,
-        strokeIndex: 1,
+        ...firstHole,
         handicap: 18,
         holesInPlay: 18,
       })
