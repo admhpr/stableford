@@ -13,10 +13,24 @@ describe(`score generation`, () => {
         handicap: 22,
         holesInPlay: 18,
       })
-      expect(result).toEqual(6)
+      expect(result).toEqual(firstHole.par + 2)
     })
-    it(`should produce the correct score for a player with a handicap under 18`, () => {})
-    it(`should produce the correct score for a player with a handicap of 0`, () => {})
+    it(`should produce the correct score for a player with a handicap under 18`, () => {
+      const result = adjustParBasedOnHandicap({
+        ...firstHole,
+        handicap: 2,
+        holesInPlay: 18,
+      })
+      expect(result).toEqual(firstHole.par)
+    })
+    it(`should produce the correct score for a player with a handicap of 0`, () => {
+      const result = adjustParBasedOnHandicap({
+        ...firstHole,
+        handicap: 0,
+        holesInPlay: 18,
+      })
+      expect(result).toEqual(firstHole.par)
+    })
     it(`should produce the correct score for a player with a handicap less than 0`, () => {})
     it(`should produce the correct score for a player with a handicap at 18`, () => {
       const result = adjustParBasedOnHandicap({
@@ -24,7 +38,7 @@ describe(`score generation`, () => {
         handicap: 18,
         holesInPlay: 18,
       })
-      expect(result).toEqual(5)
+      expect(result).toEqual(firstHole.par + 1)
     })
   })
   it(`calculate scores for players on 18 holes`, () => {})
