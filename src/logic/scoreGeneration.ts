@@ -11,12 +11,7 @@ export function adjustParBasedOnHandicap({
   strokeIndex,
   handicap,
   holesInPlay,
-}): {
-  handicap: number
-  par: PotentialHolePars
-  strokeIndex: PotentialStrokeIndexes
-  holesInPlay: PotentialHolesPlayed
-} {
+}): number {
   let extraStrokes = 0
   const additionalStrokesAwardedAfterExtra = handicap - holesInPlay
   if (additionalStrokesAwardedAfterExtra >= 0) {
@@ -29,9 +24,20 @@ export function adjustParBasedOnHandicap({
   return extraStrokes + par
 }
 
+function calculateStableFordScore(difference: number) {
+  return difference
+}
+
 function calculateStableFordScoreForHole(
   player: PlayerProfile,
-  hole: HoleContext
+  hole: HoleContext,
+  holesInPlay: PotentialHolesPlayed
 ): number {
-  return 0
+  const adjustedPar = adjustParBasedOnHandicap({
+    ...player,
+    ...hole,
+    holesInPlay,
+  })
+  const difference = adjustedPar - hole.strokesTaken
+  return calculateStableFordScore(difference)
 }
