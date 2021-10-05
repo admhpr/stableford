@@ -1,10 +1,4 @@
-import {
-  HoleContext,
-  PlayerProfile,
-  PotentialHolePars,
-  PotentialStrokeIndexes,
-  PotentialHolesPlayed,
-} from "./types"
+import { HoleContext, PlayerProfile, PotentialHolesPlayed } from "./types"
 
 export function adjustParBasedOnHandicap({
   par,
@@ -13,6 +7,15 @@ export function adjustParBasedOnHandicap({
   holesInPlay,
 }): number {
   let extraStrokes = 0
+
+  const isNegativeHandicap = handicap + holesInPlay < holesInPlay
+  console.log(isNegativeHandicap)
+  if (isNegativeHandicap) {
+    const removeStrokesFrom = holesInPlay - (handicap + holesInPlay)
+    if (strokeIndex >= holesInPlay - removeStrokesFrom) {
+      extraStrokes -= 1
+    }
+  }
   const additionalStrokesAwardedAfterExtra = handicap - holesInPlay
   if (additionalStrokesAwardedAfterExtra >= 0) {
     extraStrokes += 1
@@ -21,6 +24,7 @@ export function adjustParBasedOnHandicap({
   if (additionalStrokesAwardedAfterExtra >= strokeIndex) {
     extraStrokes += 1
   }
+
   return extraStrokes + par
 }
 

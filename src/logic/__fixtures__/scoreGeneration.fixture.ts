@@ -15,10 +15,10 @@ const cliff = {
   handicap: 28,
 }
 
-const doris = {
-  name: "Doris S. Grant",
+const ed = {
+  name: "Ed S. Grant",
   gender: "female",
-  handicap: 10,
+  handicap: -2,
 }
 
 const jo = {
@@ -105,11 +105,11 @@ const backNineHoles = [
 ]
 
 export const players = {
-  albert,
-  bert,
-  cliff,
-  doris,
-  jo,
+  zeroHandicap: jo,
+  lowerThanEighteenHandicap: albert,
+  lowerThanZeroHandicap: ed,
+  atEighteenHandicap: bert,
+  overEighteenHandicap: cliff,
 }
 
 export const courses = {

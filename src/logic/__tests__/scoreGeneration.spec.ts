@@ -5,12 +5,12 @@ function play18(course) {}
 function play9(course) {}
 
 describe(`score generation`, () => {
-  const [firstHole] = courses.eighteen
+  const [firstHole, _, __, fourthHole] = courses.eighteen
   describe(`adjustParBasedOnHandicap`, () => {
     it(`should produce the correct score for a player with a handicap over 18`, () => {
       const result = adjustParBasedOnHandicap({
         ...firstHole,
-        handicap: 22,
+        ...players.overEighteenHandicap,
         holesInPlay: 18,
       })
       expect(result).toEqual(firstHole.par + 2)
@@ -18,7 +18,7 @@ describe(`score generation`, () => {
     it(`should produce the correct score for a player with a handicap under 18`, () => {
       const result = adjustParBasedOnHandicap({
         ...firstHole,
-        handicap: 2,
+        ...players.lowerThanEighteenHandicap,
         holesInPlay: 18,
       })
       expect(result).toEqual(firstHole.par)
@@ -26,16 +26,31 @@ describe(`score generation`, () => {
     it(`should produce the correct score for a player with a handicap of 0`, () => {
       const result = adjustParBasedOnHandicap({
         ...firstHole,
-        handicap: 0,
+        ...players.zeroHandicap,
         holesInPlay: 18,
       })
       expect(result).toEqual(firstHole.par)
     })
-    it(`should produce the correct score for a player with a handicap less than 0`, () => {})
+    it(`should produce the correct score for a player with a handicap less than 0`, () => {
+      const result = adjustParBasedOnHandicap({
+        ...firstHole,
+        ...players.lowerThanZeroHandicap,
+        holesInPlay: 18,
+      })
+      expect(result).toEqual(firstHole.par)
+    })
+    it(`should produce the correct score for a player with a handicap less than 0`, () => {
+      const result = adjustParBasedOnHandicap({
+        ...fourthHole,
+        ...players.lowerThanZeroHandicap,
+        holesInPlay: 18,
+      })
+      expect(result).toEqual(fourthHole.par - 1)
+    })
     it(`should produce the correct score for a player with a handicap at 18`, () => {
       const result = adjustParBasedOnHandicap({
         ...firstHole,
-        handicap: 18,
+        ...players.atEighteenHandicap,
         holesInPlay: 18,
       })
       expect(result).toEqual(firstHole.par + 1)
