@@ -1,7 +1,8 @@
 import { createApp } from "vue"
 import Oruga from "@oruga-ui/oruga-next"
 import "@oruga-ui/oruga-next/dist/oruga.css"
-import "./assets/style.css"
+import "./assets/base.css"
+import "./assets/custom.css"
 import App from "./App.vue"
 
 createApp(App)

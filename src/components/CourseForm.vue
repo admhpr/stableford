@@ -13,7 +13,7 @@ function onButtonClick() {
 </script>
 
 <template>
-  <section>
+  <form class="p-4 shadow-md rounded-md text-left" style="max-width: 400px">
     <o-field label="Name">
       <o-input value="Kevin Garvey"></o-input>
     </o-field>
@@ -51,7 +51,7 @@ function onButtonClick() {
         <option value="2">Option 2</option>
       </o-select>
     </o-field>
-  </section>
+  </form>
 </template>
 
 <style scoped></style>
