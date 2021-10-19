@@ -3,7 +3,7 @@ import StablefordContainer from "./containers/StablefordContainer.vue"
 </script>
 
 <template>
-  <StablefordContainer>
+  <StablefordContainer />
 </template>
 
 <style>
