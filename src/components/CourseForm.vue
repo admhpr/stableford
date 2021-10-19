@@ -14,7 +14,8 @@ function onButtonClick() {
 
 <template>
   <h1>{{ msg }}</h1>
-  <button type="button" @click="onButtonClick">count is: {{ count }}</button>
+  <o-button @click="onButtonClick">Click Me</o-button>
+  <span>count is: {{ count }}</span>
 </template>
 
 <style scoped></style>

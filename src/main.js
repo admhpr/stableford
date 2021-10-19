@@ -4,4 +4,4 @@ import "@oruga-ui/oruga-next/dist/oruga.css"
 
 import App from "./App.vue"
 
-createApp(App).mount("#app").use(Oruga)
+createApp(App).use(Oruga).mount("#app")
