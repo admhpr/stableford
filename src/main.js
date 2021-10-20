@@ -1,7 +1,8 @@
 import { createApp } from "vue"
 import Oruga from "@oruga-ui/oruga-next"
-import "@oruga-ui/oruga-next/dist/oruga-full.css"
 import App from "./App.vue"
+
+import "@oruga-ui/oruga-next/dist/oruga-full.css"
 
 createApp(App)
   .use(Oruga, {
