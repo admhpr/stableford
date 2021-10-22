@@ -18,8 +18,8 @@ function onButtonClick() {
   <o-tabs v-model="activeTab" type="boxed" position="centered">
     <o-tab-item label="Course" icon="images">
       <form class="p-4 shadow-md rounded-md text-left" style="max-width: 400px">
-        <o-field label="Name">
-          <o-input value="Kevin Garvey"></o-input>
+        <o-field label="Course Name">
+          <o-input value=""></o-input>
         </o-field>
 
         <o-field label="Email" variant="danger" message="This email is invalid">
