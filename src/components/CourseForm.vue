@@ -26,9 +26,7 @@ function onButtonClick() {
           <o-input value=""></o-input>
         </o-field>
 
-        <o-field label="Email" variant="danger" message="This email is invalid">
-          <o-input type="email" value="john@" maxlength="30"> </o-input>
-        </o-field>
+        
 
         <o-field
           label="Username"
