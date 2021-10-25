@@ -1,10 +1,14 @@
-<script setup>
-import { computed } from "@vue/reactivity";
+<script setup lang="ts">
+import { computed, toRefs } from "@vue/reactivity";
 
-defineProps({
+const props = defineProps({
     holeNumber: Number
 })
-const fieldLabel = computed(() => `Description for hole ${holeNumber}`)
+
+
+const { holeNumber } = toRefs(props);
+
+const fieldLabel = computed(() => `Description for hole ${holeNumber.value}`)
 </script>
 <template>
     <o-field :label="fieldLabel">

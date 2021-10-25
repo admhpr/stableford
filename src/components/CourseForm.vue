@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import HoleDescriptionField from "./HoleDescriptionField.vue"
+import { ref, computed, defineComponent } from "vue"
 
 defineProps({
   msg: String,
 })
 
+defineComponent({HoleDescriptionField})
 const activeTab = ref(0)
 const count = ref(0)
 const isNineHoleCourse = ref(false)
@@ -13,6 +15,8 @@ const holesInPlay = computed(() => isNineHoleCourse.value ? 9 : 18)
 function onButtonClick() {
   count.value += 1
 }
+
+
 </script>
 
 <template>
@@ -26,7 +30,7 @@ function onButtonClick() {
           <o-input value=""></o-input>
         </o-field>
 
-        
+        <HoleDescriptionField v-for="hole in holesInPlay" :key="hole" :hole-number="hole"/>
 
         <o-field
           label="Username"
