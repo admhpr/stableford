@@ -8,7 +8,7 @@ defineProps({
 const activeTab = ref(0)
 const count = ref(0)
 const isNineHoleCourse = ref(false)
-const holesPlayed = computed(() => isNineHoleCourse.value ? 9 : 18)
+const holesInPlay = computed(() => isNineHoleCourse.value ? 9 : 18)
 
 function onButtonClick() {
   count.value += 1
@@ -21,7 +21,7 @@ function onButtonClick() {
     <o-tab-item label="Course" icon="images">
       <form class="p-4 shadow-md rounded-md text-left" style="max-width: 400px">
         <o-switch v-model="isNineHoleCourse">9 Hole Course</o-switch>
-        {{holesPlayed}}
+        {{holesInPlay}}
         <o-field label="Course Name">
           <o-input value=""></o-input>
         </o-field>
