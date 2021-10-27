@@ -9,7 +9,8 @@
     "test": "npx jest",
     "test:dev": "npx jest --watch",
     "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}'",
-    "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix"
+    "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@oruga-ui/oruga-next": "^0.4.5",
@@ -31,7 +32,8 @@
     "prettier": "^2.4.0",
     "tailwindcss": "^2.2.17",
     "typescript": "^4.4.3",
-    "vite": "^2.5.4"
+    "vite": "^2.5.4",
+    "husky": "^7.0.0"
   },
   "jest": {
     "transform": {
