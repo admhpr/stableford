@@ -12,7 +12,9 @@ const fieldLabel = computed(() => `Description for hole ${holeNumber.value}`)
 </script>
 <template>
     <o-field :label="fieldLabel">
-        <o-input type="email" value="john@" maxlength="30"> </o-input>
+        <o-input type="text" value="" maxlength=""> </o-input>
+        <o-input type="text" value="" maxlength=""> </o-input>
+        <o-input type="text" value="" maxlength=""> </o-input>
     </o-field>
 </template>
 
