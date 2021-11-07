@@ -15,8 +15,12 @@ const fieldLabel = computed(() => `Description for hole ${holeNumber.value}`)
 </script>
 <template>
     <o-field :label="fieldLabel">
-        <o-input type="text" v-model="par"> </o-input>
-        <o-input type="text" v-model="strokeIndex"> </o-input>
+        <o-field label="Par">
+            <o-input type="text" v-model="par"> </o-input>
+        </o-field>
+        <o-field label="Stroke Index">
+            <o-input type="text" v-model="strokeIndex"> </o-input>
+        </o-field>
     </o-field>
 </template>
 
